@@ -25,9 +25,7 @@ $(function() {
 
     //some other declarations
     var game_over = false;
-
     var score_counter = 1;
-
     var speed = 2;
     var line_speed = 5;
 
