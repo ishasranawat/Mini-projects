@@ -23,4 +23,4 @@ $(function() {
     var car_width = parseInt(car.width());
     var car_height = parseInt(car.height());
 
-    //some other declarations
+
