@@ -1,5 +1,6 @@
 $(function() {
     var anim_id;
+    
     //saving dom objects to variables
     var container = $('#container');
     var car = $('#car');
