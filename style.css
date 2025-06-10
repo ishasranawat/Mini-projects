@@ -1,66 +1,63 @@
-body {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  height: 100vh; /* Full viewport height */
-  margin: 0; /* Remove default margins */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
 }
-
-.outerbox {
-  background-color: #5ec2ad;
-  width: 300px;
-  min-height: 150px; /* Minimum height */
+body{
+  height: 100vh;
+  width: 100%;
+  background: #bbec9c;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 4%;
-  padding: 10px;
-  overflow: hidden; /* Prevent content overflow */
 }
-
-h1 {
-  margin: 0; /* Remove extra margin to avoid misalignment */
-}
-
-input {
-  width: 80%; /* Adjust width */
-  padding: 5px;
-  margin-top: 10px;
-}
-
-button {
-  margin-top: 10px;
-  padding: 5px 10px;
-  background-color:  #FF6B6B;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-button:hover {
-  background-color: #E55A5A;
-}
-
-#todo-list {
+.box{
+  max-width: 400px;
   width: 100%;
-  padding: 0;
-  list-style: none;
+}
+.box .search-box{
+  position: relative;
+  height: 50px;
+  max-width: 50px;
+  margin: auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+#check:checked ~ .search-box{
+  max-width: 380px;
+}
+.search-box input{
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ border-radius: 25px;
+ background: #fff;
+ outline: none;
+ border: none;
+ padding-left: 20px;
+ font-size: 18px;
+}
+.search-box .icon{
+  position: absolute;
+  right: -2px;
+  top: 0;
+  width: 50px;
+  background: #FFF;
+  height: 100%;
   text-align: center;
+  line-height: 50px;
+  color: #42a32c95;
+  font-size: 20px;
+  border-radius: 25px;
 }
-
-#todo-list li {
-  background-color: #fff;
-  margin: 5px 0;
-  padding: 5px;
-  border-radius: 4px;
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
+#check:checked ~ .search-box .icon{
+  background: #42a32c95;
+  color: #FFF;
+  width: 60px;
+  border-radius: 0 25px 25px 0;
 }
-
-.outerbox {
-  max-height: 80vh; /* Prevent infinite growth */
-  overflow-y: auto; /* Add scrollbar when necessary */
+#check{
+  display: none;
 }
