@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Convertor</title>
+  </head>
+  <body>
+    <script>
+      function convertTemp(degrees, unit) {
+        if (unit === "C") {
+          convertToFahren(degrees);
+        } else {
+          convertToCelcius(degrees);
+        }
+      }
+
+      function convertToFahren(celcius) {
+        let fahrenheit = (celcius * 9) / 5 + 32;
+        console.log(fahrenheit);
+      }
+
+      function convertToCelcius(fahren) {
+        let celc = ((fahren - 32) * 5) / 9;
+        console.log(celc);
+      }
+
+      convertTemp(86, "F");
+    </script>
+  </body>
+</html>
