@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Length Convertor</title>
+  </head>
+  <body>
+    <script>
+
+      function lenCon(length, from, to){
+        if(from==='miles' && to==='km'){
+          km(length); 
+        }
+        else if(from==='km' && to==='miles'){
+          miles(length);
+        }
+        else if(from==='miles'&& to==='feet'){
+          feet(length);
+        }
+        else if(from==='feet'&& to==='miles'){
+          fitoMi(length);
+        }
+        else if(from==='km'&& to==='feet'){
+          kmtofit(length);
+
+        }
+        else if(from==='feet'&& to==='km'){
+          fitokm(length);
+
+        }
+
+        else if(from===to){
+          console.log(length);
+        }
+        else{
+          console.log('Invalid units.')
+        }
+      }
+
+function km(miles) {
+      let kilom = 1.60934 * miles; 
+      console.log(kilom);
+    }
+
+    function miles(km) {
+      let mi = 0.62137 * km;  
+      console.log(mi);
+    }
+
+    function feet(miles) {
+      let fi = 5280 * miles;
+      console.log(fi);
+    }
+
+    function fitoMi(feet) {
+      let mi = feet / 5280;
+      console.log(mi);
+    }
+
+    function fitokm(feet) {
+      let km = 0.0003048 * feet;
+      console.log(km);
+    }
+
+    function kmtofit(km) {
+      let feet = 3280.84 * km;
+      console.log(feet);
+    }
+
+
+
+   lenCon(50, 'miles', 'km');
+    lenCon(32, 'km', 'miles');
+    lenCon(50, 'km', 'km');
+    lenCon(10, 'miles', 'feet');
+    lenCon(5280, 'feet', 'miles');
+    lenCon(1, 'km', 'feet');
+    lenCon(3280.84, 'feet', 'km');
+    </script>
+  </body>
+</html>
