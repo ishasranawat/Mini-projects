@@ -1,4 +1,5 @@
-//Using Ternary Operators
+** Using Ternary Operators **
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,9 +12,28 @@
       let guess = "heads";
       let toss= Math.random() <0.5 ? 'heads' : 'tails';
       let result= guess===toss? `Computer picked ${toss}. You picked ${guess} so you win.` : `Computer picked ${toss}. You picked ${guess} so you lose.`
-      console.log(result);
-
-    
+      console.log(result); 
     </script>
   </body>
 </html>
+
+
+
+** Normal if else **
+
+<script> 
+    let guess= 'heads';
+    let toss;
+    if(Math.random()<0.5){
+      toss= 'heads';
+    }
+    else{
+      toss= 'tails';
+    }
+    if(guess===toss){
+      console.log(`Computer picked ${toss}. You picked ${guess} so you win.`);
+    }
+    else{
+      console.log(`Computer picked ${toss}. You picked ${guess} so you lose.`);
+    }
+</script>
