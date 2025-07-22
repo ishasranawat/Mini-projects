@@ -1,0 +1,19 @@
+//Using Ternary Operators
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let guess = "heads";
+      let toss= Math.random() <0.5 ? 'heads' : 'tails';
+      let result= guess===toss? `Computer picked ${toss}. You picked ${guess} so you win.` : `Computer picked ${toss}. You picked ${guess} so you lose.`
+      console.log(result);
+
+    
+    </script>
+  </body>
+</html>
